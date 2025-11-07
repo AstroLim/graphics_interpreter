@@ -256,11 +256,11 @@ This is a complete, production-ready interpreter system. Future enhancements cou
 - Animation support
 - Export to image formats
 
-## License
-
-This project is provided as-is for educational and demonstration purposes.
-
 ## Author
+
+Seth Gabriel Lagman
+Evan Vincent Lim
+Josh Metran
 
 Created as a comprehensive interpreter system demonstrating:
 - Lexical analysis (tokenization)
