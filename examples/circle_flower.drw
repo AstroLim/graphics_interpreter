@@ -1,0 +1,26 @@
+# Circle flower pattern
+# Draws a flower using circles
+
+var petals = 8
+var radius = 50
+var angle = 360 / petals
+
+color("red")
+fill()
+
+for i = 1 to petals {
+    penup()
+    var x = radius * cos(i * angle)
+    var y = radius * sin(i * angle)
+    goto(x, y)
+    pendown()
+    circle(30)
+}
+
+# Center circle
+penup()
+goto(0, 0)
+pendown()
+color("yellow")
+circle(20)
+

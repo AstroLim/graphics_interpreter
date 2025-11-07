@@ -1,0 +1,54 @@
+# Geometric shapes demonstration
+# Shows various drawing capabilities
+
+# Rectangle
+color("red")
+fill()
+rectangle(100, 60, -200, 100)
+
+# Circle
+color("blue")
+nofill()
+circle(50, -100, 100)
+
+# Line
+color("green")
+width(3)
+line(-200, 0, 200, 0)
+
+# Triangle (polygon)
+color("purple")
+fill()
+polygon(100, -100, 150, -200, 50, -200)
+
+# Arc
+color("orange")
+width(2)
+arc(80, 40, 0, 100, -100)
+
+# Hexagon using lines
+color("teal")
+nofill()
+width(2)
+var sides = 6
+var radius = 40
+var center_x = -100
+var center_y = -100
+
+penup()
+var start_angle = 0
+var start_x = center_x + radius * cos(start_angle)
+var start_y = center_y + radius * sin(start_angle)
+goto(start_x, start_y)
+pendown()
+
+for i = 1 to sides {
+    var angle = i * 360 / sides
+    var x = center_x + radius * cos(angle)
+    var y = center_y + radius * sin(angle)
+    goto(x, y)
+}
+
+# Close hexagon
+goto(start_x, start_y)
+

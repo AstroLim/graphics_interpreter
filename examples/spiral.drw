@@ -1,0 +1,16 @@
+# Spiral drawing example
+# This script draws a spiral pattern
+
+var angle = 0
+var distance = 1
+
+color("blue")
+width(2)
+
+while angle < 720 {
+    forward(distance)
+    right(2)
+    angle = angle + 2
+    distance = distance + 0.1
+}
+

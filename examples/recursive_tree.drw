@@ -1,0 +1,31 @@
+# Recursive tree drawing
+# Uses a recursive function to draw a tree
+
+function tree(length, depth) {
+    if depth > 0 {
+        forward(length)
+        right(30)
+        tree(length * 0.7, depth - 1)
+        left(60)
+        tree(length * 0.7, depth - 1)
+        right(30)
+        backward(length)
+    }
+}
+
+# Setup
+reset()
+penup()
+goto(0, -200)
+pendown()
+color("brown")
+width(3)
+
+# Draw trunk
+forward(50)
+
+# Draw branches
+color("green")
+width(2)
+tree(60, 5)
+

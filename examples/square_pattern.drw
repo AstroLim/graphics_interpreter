@@ -1,0 +1,29 @@
+# Square pattern example
+# Draws multiple squares in a pattern
+
+function square(size) {
+    for i = 1 to 4 {
+        forward(size)
+        right(90)
+    }
+}
+
+var size = 20
+var x = -200
+
+while x < 200 {
+    penup()
+    goto(x, 0)
+    pendown()
+    
+    if x < 0 {
+        color("red")
+    } else {
+        color("blue")
+    }
+    
+    square(size)
+    x = x + 50
+    size = size + 5
+}
+

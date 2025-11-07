@@ -1,0 +1,69 @@
+# Star drawing example
+# Draws a 5-pointed star
+
+function star(size) {
+    for i = 1 to 5 {
+        forward(size)
+        right(144)
+    }
+}
+
+color("gold")
+width(3)
+star(100)
+
+# Draw filled star using polygon
+# Calculate all points first, then draw
+var size2 = 100
+var inner_size = size2 * 0.38
+
+# Outer point 1
+var x1 = size2 * cos(-90)
+var y1 = size2 * sin(-90)
+
+# Inner point 1
+var x2 = inner_size * cos(-18)
+var y2 = inner_size * sin(-18)
+
+# Outer point 2
+var x3 = size2 * cos(54)
+var y3 = size2 * sin(54)
+
+# Inner point 2
+var x4 = inner_size * cos(126)
+var y4 = inner_size * sin(126)
+
+# Outer point 3
+var x5 = size2 * cos(198)
+var y5 = size2 * sin(198)
+
+# Inner point 3
+var x6 = inner_size * cos(270)
+var y6 = inner_size * sin(270)
+
+# Outer point 4
+var x7 = size2 * cos(342)
+var y7 = size2 * sin(342)
+
+# Inner point 4
+var x8 = inner_size * cos(54)
+var y8 = inner_size * sin(54)
+
+# Outer point 5
+var x9 = size2 * cos(126)
+var y9 = size2 * sin(126)
+
+# Inner point 5
+var x10 = inner_size * cos(198)
+var y10 = inner_size * sin(198)
+
+penup()
+goto(0, 0)
+pendown()
+
+color("orange")
+fill()
+
+# Draw star polygon with all points
+polygon(x1, y1, x2, y2, x3, y3, x4, y4, x5, y5, x6, y6, x7, y7, x8, y8, x9, y9, x10, y10)
+
